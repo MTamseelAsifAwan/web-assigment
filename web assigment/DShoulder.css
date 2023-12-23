@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+.exercise {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 10px #0044ff;
+}
+.video-container {
+    text-align: center;
+    margin: 20px;
+    
+}
+iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 360px;
+}

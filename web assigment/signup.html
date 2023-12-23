@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyworkoutPlanner  Work Hard To Get Better Life</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/bmics.css">
+  <link rel="stylesheet" href="singstyle.css">
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;800;900&family=Rubik:wght@400;500;800&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+  <link rel="preload" as="image" href="./assets/images/hero-circle-one.png">
+  <link rel="preload" as="image" href="./assets/images/hero-circle-two.png">
+  <link rel="preload" as="image" href="./assets/images/heart-rate.svg">
+  <link rel="preload" as="image" href="./assets/images/calories.svg">
+<!-- Add this to the head section of your HTML -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+  <style media="screen">
+ 
+  </style>
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <ion-icon name="barbell-sharp" aria-hidden="true"></ion-icon>
+
+        <span class="span">MyworkoutPlanner</span>
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-sharp" aria-hidden="true"></ion-icon>
+        </button>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="index.php" class="navbar-link " data-nav-link>Home</a>
+          </li>
+
+          <li>
+            <a href="dumbell.html" class="navbar-link" data-nav-link>Dumbell Exercises</a>
+          </li>
+
+          <li>
+            <a href="barbell.html" class="navbar-link" data-nav-link>Barbell Exercises</a>
+          </li>
+
+          <li>
+            <a href="bmi.html" class="navbar-link" data-nav-link>BMI Calculator</a>
+          </li>
+
+        
+
+        </ul>
+
+      </nav>
+
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero bg-dark has-after has-bg-image" id="home" aria-label="hero" data-section
+        style="background-image: url('./assets/images/hero-bg.png')">
+        <div class="f">
+        <div class="container">
+
+          <div class="hero-content">
+       
+          
+            <div class="background">
+                <div class="shape"></div>
+                <div class="shape"></div>
+            </div>
+            
+            <form>
+                <div class="fom">
+                    <h3>Sign Up</h3>
+                    <label for="username">First Name</label>
+                    <input type="text" placeholder="First Name" id="fname">
+                    <label for="username">Second Name</label>
+                    <input type="text" placeholder="Second Name" id="sname">
+                    <label for="username">Username</label>
+                    <input type="text" placeholder="e.g (tamseelasif@gamil.com)" id="username">
+                    <label for="password">Password</label> <!-- Corrected the for attribute -->
+                    <input type="password" placeholder="Password" id="password">
+                    <label for="password">Retype-Password</label> <!-- Corrected the for attribute -->
+                    <input type="password" placeholder="Password" id="retypepassword">
+                      <!-- Additional attributes -->
+    <label for="city">City</label>
+    <input type="text" placeholder="City" id="city">
+
+    <label for="dob">Date of Birth</label>
+    <input type="date" id="dob">
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" placeholder="+923335771292" id="phone">
+
+    <label for="profession">Profession</label>
+    <input type="text" placeholder="like (Doctor)" id="profession">
+
+    <label for="age">Age</label>
+    <input type="number" placeholder="Age" id="age">
+    <label for="activityLevel">Activity Level</label>
+    <input type="text" placeholder="like (Highly Active)" id="activityLevel">
+    <label for="Medical Condition">Medical Condition</label>
+    <input type="text" placeholder="like (High Blood Pressure)" id="Medical">
+    <label for="Fitness Goal">Fitness Goal</label>
+    <input type="goal" placeholder="e,g (Fatloss)" id="goal">
+    <label for="Fitness Level">Fitness Level</label>
+    <input type="fitness level" placeholder="like (Intermdiate)" id="flevel">
+  
+                    <button onclick="return checkPassword(),checkPassword1(),validateForm()" id="signupForm">Sign Up</button>
+                    
+                   
+                </div>
+            </form>
+        </div>
+     
+            <p>
+              <br>
+              <br>
+            
+              <br>
+            </p>
+            <p>
+  
+            </p>
+      </section>
+
+      <script>
+        $(document).ready(function () {
+          // Add a submit event handler to the form
+          $("#loginForm").submit(function (event) {
+            // Call the checkPassword function
+            if (!checkPassword()) {
+              // Prevent form submission if password is invalid
+              event.preventDefault();
+            }
+          });
+      
+          // Add a click event handler to the signup button
+          $("#signupButton").click(function () {
+            alert("Sign Up button clicked");
+            // You can add further signup logic here
+          });
+        });
+      
+        function checkPassword() {
+          const passwordInput = $("#password");
+          const passwordValue = passwordInput.val();
+      
+          if (passwordValue.length < 8) {
+            alert("Password should be at least 8 characters long.");
+            return false; // Return false to prevent form submission
+          }
+      
+          return true; // Continue with form submission if the password is valid
+        }
+        
+        function checkPassword1() {
+          const password = $("#password").val();
+          const retypePassword = $("#retypepassword").val();
+
+          if (password !== retypePassword) {
+            alert("Passwords do not match.");
+            isValid = false;
+          }
+
+          return isValid;// Continue with form submission if the password is valid
+        }
+        
+      
+
+    $(document).ready(function () {
+    // Add a submit event handler to the form
+    $("form").submit(function (event) {
+      // Call the validateForm function
+      if (!validateForm()) {
+        // Prevent form submission if validation fails
+        event.preventDefault();
+      }
+    });
+  });
+  function validateForm() {
+          // Check each input field for empty values
+          const fields = ["fname", "sname", "username", "password", "retypepassword", "city", "dob", "phone", "profession", "age", "activityLevel", "Medical", "goal", "flevel"];
+          let isValid = true;
+
+          for (const field of fields) {
+            const inputValue = $("#" + field).val();
+
+            // Check if the field is empty
+            if (inputValue.trim() === "") {
+              alert("Please fill out all fields.");
+              isValid = false;
+              break; // Stop checking if one field is empty
+            }
+
+            // Additional validation checks can be added here
+
+            // Validate email format
+            if (field === "username" && !isValidEmail(inputValue)) {
+              alert("Please enter a valid email address.");
+              isValid = false;
+              break;
+            }
+
+            // Validate phone number format
+            if (field === "phone" && !isValidPhoneNumber(inputValue)) {
+              alert("Please enter a valid phone number.");
+              isValid = false;
+              break;
+            }
+          }
+
+          return isValid;
+        }
+
+        function isValidEmail(email) {
+          // Use a regular expression to validate the email format
+          const emailRegex = /\S+@\S+\.\S+/;
+          return emailRegex.test(email);
+        }
+
+        function isValidPhoneNumber(phoneNumber) {
+          // Use a regular expression to validate the phone number format
+          const phoneRegex = /^\+\d{12}$/; // Assumes the phone number should start with a country code, e.g., +12345678901
+          return phoneRegex.test(phoneNumber);
+        }
+    
+      </script>
+      
+      
+   
+
+
+
+
+
+
+    </article>
+  </main>
+
+
+
+
+
+ 
+</body>
+
+</html>

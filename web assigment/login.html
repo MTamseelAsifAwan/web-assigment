@@ -1,0 +1,265 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyworkoutPlanner  Work Hard To Get Better Life</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/bmics.css">
+  <link rel="stylesheet" href="logstyle.css">
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;800;900&family=Rubik:wght@400;500;800&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+  <link rel="preload" as="image" href="./assets/images/hero-circle-one.png">
+  <link rel="preload" as="image" href="./assets/images/hero-circle-two.png">
+  <link rel="preload" as="image" href="./assets/images/heart-rate.svg">
+  <link rel="preload" as="image" href="./assets/images/calories.svg">
+<!-- Add this to the head section of your HTML -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+
+</head>
+
+<body id="top">
+
+ 
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <ion-icon name="barbell-sharp" aria-hidden="true"></ion-icon>
+
+        <span class="span">MyworkoutPlanner</span>
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-sharp" aria-hidden="true"></ion-icon>
+        </button>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="index.html" class="navbar-link " data-nav-link>Home</a>
+          </li>
+
+          <li>
+            <a href="dumbell.html" class="navbar-link" data-nav-link>Dumbell Exercises</a>
+          </li>
+
+          <li>
+            <a href="barbell.html" class="navbar-link" data-nav-link>Barbell Exercises</a>
+          </li>
+
+          <li>
+            <a href="bmi.html" class="navbar-link" data-nav-link>BMI Calculator</a>
+          </li>
+
+        
+
+        </ul>
+
+      </nav>
+
+      <a href="log2.php" class="btn btn-secondary">Join Now</a>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero bg-dark has-after has-bg-image" id="home" aria-label="hero" data-section
+        style="background-image: url('./assets/images/hero-bg.png')">
+        <div class="container">
+
+          <div class="hero-content">
+       
+           <div class="f">
+            <div class="background">
+                <div class="shape"></div>
+                <div class="shape"></div>
+            </div>
+   <!-- ... Your existing HTML code ... -->
+
+<form action="" method="post">
+  <div class="fom">
+      <h3>Login Here</h3>
+      <label for="username">Username</label>
+      <input type="text" name="username" placeholder="Email or Phone" id="username">
+      <label for="password">Password</label>
+      <input type="password" name="password" placeholder="Password" id="password">
+      <button type="submit" name="login">Log In</button>
+      <a style="  margin-top: 50px;
+      width: 100%;
+      background-color:  rgb(32, 97, 218);
+      color: #080710;
+      padding: 15px 0;
+      font-size: 18px;
+      font-weight: 600;
+      text-align: center;
+      border-radius: 5px;
+      cursor: pointer;
+      color: white;" href="./signup.html" id="signupButton" >signup</a>
+      <div class="social">
+          <div class="go"><i class="fab fa-google"></i> Google</div>
+          <div class="fb"><i class="fab fa-facebook"></i> Facebook</div>
+      </div>
+  </div>
+</form>
+
+        </div>
+     
+            <p>
+              <br>
+              <br>
+            
+              <br>
+            </p>
+            <p>
+  
+            </p>
+      </section>
+
+
+      <script>
+
+
+
+
+        $(document).ready(function () {
+          // Add a submit event handler to the form
+          $("#loginForm").submit(function (event) {
+            // Call the checkPassword function
+            if (!checkPassword()) {
+              // Prevent form submission if password is invalid
+              event.preventDefault();
+            }
+          });
+      
+          // Add a click event handler to the signup button
+          $("#signupButton").click(function () {
+            alert("Sign Up button clicked");
+            // You can add further signup logic here
+          });
+        });
+      
+        function checkPassword() {
+          const passwordInput = $("#password");
+          const passwordValue = passwordInput.val();
+      
+          if (passwordValue.length < 8) {
+            alert("Password should be at least 8 characters long.");
+            return false; // Return false to prevent form submission
+          }
+      
+          return true; // Continue with form submission if the password is valid
+        }
+        //fields
+        ;
+      </script>
+      <!--Java Script-->
+      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+  $(document).ready(function() {
+    console.log("Document ready!"); // Check if this message appears in the console
+
+    // Add a submit event handler to the form
+    $("form").submit(function(event) {
+      console.log("Form submitted!"); // Check if this message appears in the console
+      
+      // Call the validateForm function
+      if (!validateForm()) {
+        // Prevent form submission if validation fails
+        event.preventDefault();
+      }
+    });
+
+    function validateForm() {
+      let isValid = true;
+
+      // Check each input field
+      $("form input").each(function() {
+        if ($(this).val() === '') {
+          // If any field is empty, set isValid to false
+          isValid = false;
+          // Show an alert or highlight the empty field (optional)
+          $(this).css("border", "1px solid red");
+        }
+      });
+
+      if (!isValid) {
+        alert("Please fill out all fields.");
+      }
+
+      return isValid;
+    }
+  });
+</script>
+
+
+
+    
+
+
+   
+
+
+
+
+
+
+    </article>
+  </main>
+
+
+
+
+
+ 
+</body>
+
+</html>
